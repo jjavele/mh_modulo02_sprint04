@@ -7,7 +7,7 @@
 
 .name-page-box{
     display: flex;
-    width: 100vw;
+    width: 99vw;
     height: 10vh;
 }
 
@@ -54,6 +54,10 @@ main{
     background-size: cover;
 }
 
+.containerCardsBox{
+    width: 90vw;
+}
+
 footer img{
     width: 2vw;
 }
@@ -79,22 +83,6 @@ table, thead, tr, th, td{
 
 @media only screen and (min-width: 320px) and (max-width: 767px){
 
-    .containerCardsBox{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sub-nav-box{
-        flex-direction: column-reverse;
-        height: 18vh;
-    }
-
-    footer img{
-        width: 7vw;
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 991px){
     .vh-header{
         height: 40vh;
         justify-content: center;
@@ -102,6 +90,37 @@ table, thead, tr, th, td{
 
     .logoImg{
         width: 40vw;
-
     }
+    
+    
+    .containerCardsBox{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-nav-box{
+        flex-direction: column-reverse;
+        height: 28vh;
+    }
+
+    footer img{
+        width: 7vw;
+    }
+
+    .sub-nav-box-selects{
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .vh-header{
+        height: 40vh;
+        justify-content: center;
+    }
+
+    .logoImg{
+        width: 40vw;
+    }
+
+
 }
