@@ -4,13 +4,19 @@ console.log(location.search)
 
 const params = new URLSearchParams(location.search)
 
-const _id = params.get("_id")
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    .then(response => response.json()) //resolve (respuesta positiva): utilizamos método json qe nos devuelve otra promesa
+    .then(info =>{ //
+        data = info
+        //console.log(data.amazing)
+        
+        const _id = params.get("_id")
 
-const findedCard = data.events.find( element => element._id == _id)
+        const findedCard = data.events.find( element => element._id == _id)
 
-console.log(findedCard)
+        console.log(findedCard)
 
-$details.innerHTML = `
+        $details.innerHTML = `
             <div class="pt-4 ps-2 pe-2">
                 <div class="card mb-3 bg-black text-violet rounded-4" style="max-width: 768px;">
                     <div class="row g-0">
@@ -30,3 +36,6 @@ $details.innerHTML = `
                     </div>
                 </div>
             </div>`
+
+    })
+    .catch(err => console.log(err))

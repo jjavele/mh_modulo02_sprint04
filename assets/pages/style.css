@@ -58,6 +58,11 @@ main{
     width: 90vw;
 }
 
+.tables{
+    width: 60vw;
+    text-align: center;
+}
+
 footer img{
     width: 2vw;
 }
